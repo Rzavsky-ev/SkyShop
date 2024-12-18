@@ -27,12 +27,12 @@ public class ShopController {
 
     @GetMapping("/products")
     public Collection<Product> getAllProducts() {
-        return storageService.getProductStorage().collect(Collectors.toCollection(ArrayList::new));
+        return storageService.getProductStorage();
     }
 
     @GetMapping("/articles")
     public Collection<Article> getAllArticles() {
-        return storageService.getArticleStorage().collect(Collectors.toCollection(ArrayList::new));
+        return storageService.getArticleStorage();
     }
 
     @GetMapping("/search")
