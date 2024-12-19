@@ -12,7 +12,8 @@ import java.util.*;
 
 @Service
 public class StorageService {
-    
+
+
     private final Map<UUID, Product> productStorage;
     private final Map<UUID, Article> articleStorage;
 
@@ -53,5 +54,9 @@ public class StorageService {
         allSearchable.addAll(getProductStorage());
         allSearchable.addAll(getArticleStorage());
         return allSearchable;
+    }
+
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(productStorage.get(id));
     }
 }
