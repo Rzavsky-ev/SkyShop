@@ -1,5 +1,6 @@
 package org.skypro.skyshop.model.search;
 
+
 import java.util.UUID;
 
 public final class SearchResult {
@@ -17,5 +18,21 @@ public final class SearchResult {
     public static SearchResult fromSearchable(Searchable searchable) {
         return new SearchResult(searchable.getId(),
                 searchable.getSearchTerm(), searchable.getContentType());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof SearchResult)) {
+            return false;
+        }
+        SearchResult other = (SearchResult) obj;
+        if (!this.name.equals(other.name)) {
+            return false;
+        }
+        return true;
     }
 }

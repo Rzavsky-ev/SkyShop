@@ -18,7 +18,6 @@ public class ProductBasket {
         } else {
             productsBasket.put(id, productsBasket.get(id) + 1);
         }
-
     }
 
     public Map<UUID, Integer> getProductsBasket() {
