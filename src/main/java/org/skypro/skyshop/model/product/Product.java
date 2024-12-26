@@ -49,15 +49,12 @@ public abstract class Product implements Searchable {
 
     @Override
     public boolean equals(Object obj) {
-        // Проверка на null
         if (obj == null) {
             return false;
         }
-        // Проверка на тип
         if (!(obj instanceof Product)) {
             return false;
         }
-        // Приведение к типу Person
         Product other = (Product) obj;
         return this.getNameProduct().equals(other.getNameProduct());
     }
