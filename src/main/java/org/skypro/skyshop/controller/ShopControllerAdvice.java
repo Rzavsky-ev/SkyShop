@@ -1,4 +1,4 @@
-package org.skypro.skyshop.model.controller;
+package org.skypro.skyshop.controller;
 
 
 import org.skypro.skyshop.model.error.ShopError;

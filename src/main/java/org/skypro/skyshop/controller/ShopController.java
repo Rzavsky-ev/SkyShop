@@ -1,4 +1,4 @@
-package org.skypro.skyshop.model.controller;
+package org.skypro.skyshop.controller;
 
 import org.skypro.skyshop.model.article.Article;
 import org.skypro.skyshop.model.basket.UserBasket;
@@ -54,7 +54,3 @@ public class ShopController {
         return basketService.getUserBasket();
     }
 }
-/*
-@GetMapping("/basket/{id}")
-public String addProduct(@PathVariable("id") UUID id)
- */
